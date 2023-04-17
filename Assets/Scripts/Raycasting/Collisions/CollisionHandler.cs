@@ -63,6 +63,11 @@ public class CollisionHandler : Components
 
                 if (hit.collider.tag == "Spring") continue;
                 if (hit.collider.tag == "ReverseThrough") continue;
+                if (hit.collider.tag == "Hazard")
+                {
+                    Debug.Log("Dead");
+                    continue;
+                }
 
                 velocity.x = (hit.distance - playerWidth) * dirX;
 
@@ -118,6 +123,12 @@ public class CollisionHandler : Components
                 {
                     // Simple 1-way
                     if (dirY == 1 || hit.distance == 0) continue;
+                }
+
+                if (hit.collider.tag == "Hazard")
+                {
+                    Debug.Log("Dead");
+                    continue;
                 }
 
                 velocity.y = (hit.distance - playerWidth) * dirY;

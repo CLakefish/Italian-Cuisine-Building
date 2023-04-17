@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
         Falling,
         Climbing,
         WallJumping,
+
+        Dead,
     }
 
     [Header("Debugging")]
@@ -75,7 +77,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Inputs
-        Vector2 input = (state == States.WallJumping) ? new Vector2(0f, 0f) : inputManager.playerMovement;
+        Vector2 input = (state == States.WallJumping) ? new Vector2(0f, 0f) : inputManager.playerMovement.normalized;
 
         // Velocity
         float desiredVel = input.x * moveSpeed,
