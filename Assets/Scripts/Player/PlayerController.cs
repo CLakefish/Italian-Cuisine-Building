@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
 
     #region Variables
 
+    internal Vector3 spawnObj;
+
     // Player States
     public enum States
     {
@@ -103,7 +105,7 @@ public class PlayerController : MonoBehaviour
         velocity.y = Mathf.Clamp(velocity.y, -150f, Mathf.Infinity);
 
         // Movement
-        c.Move(velocity * Time.deltaTime, false);
+        if (state != States.Dead) c.Move(velocity * Time.deltaTime, false);
     }
 
     public void MainMovement(Vector2 input)
@@ -286,6 +288,16 @@ public class PlayerController : MonoBehaviour
                     break;
                 }
                 //if (Mathf.Abs(velocity.x) == jumpWall.x) ChangeState(States.Falling);
+
+                break;
+
+            case (States.Dead):
+
+                if (stateDur > 0.2f)
+                {
+                    transform.position = spawnObj;
+                    ChangeState(States.Falling);
+                }
 
                 break;
         }

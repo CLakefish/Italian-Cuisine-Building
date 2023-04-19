@@ -66,6 +66,13 @@ public class CollisionHandler : Components
                 if (hit.collider.tag == "Hazard")
                 {
                     Debug.Log("Dead");
+                    p.state = PlayerController.States.Dead;
+                    continue;
+                }
+
+                if (hit.collider.tag == "Respawn")
+                {
+                    p.spawnObj = hit.collider.gameObject.transform.position;
                     continue;
                 }
 
@@ -128,6 +135,13 @@ public class CollisionHandler : Components
                 if (hit.collider.tag == "Hazard")
                 {
                     Debug.Log("Dead");
+                    p.state = PlayerController.States.Dead;
+                    continue;
+                }
+
+                if (hit.collider.tag == "Respawn")
+                {
+                    p.spawnObj = hit.collider.gameObject.transform.position;
                     continue;
                 }
 
