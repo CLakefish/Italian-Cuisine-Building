@@ -42,6 +42,8 @@ public class FallingObj : Components
 
         if (!stable)
         {
+            MoveObj(false);
+
             transform.Translate(vel * Time.deltaTime);
 
             MoveObj(true);
@@ -53,6 +55,8 @@ public class FallingObj : Components
 
     void MoveObj(bool beforeMove)
     {
+        if (objMovement.Count == 0) return;
+
         foreach (ObjMovement obj in objMovement)
         {
             if (!objDictionary.ContainsKey(obj.transform))
@@ -62,6 +66,8 @@ public class FallingObj : Components
 
             if (obj.moveBeforePlatform == beforeMove)
             {
+                if (objDictionary[obj.transform] == null) return;
+
                 objDictionary[obj.transform].Move(obj.desiredVel * Time.deltaTime, obj.onPlatform);
             }
         }

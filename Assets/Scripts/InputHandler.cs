@@ -70,7 +70,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""97740c72-7e28-4b88-b3c0-47461c5223c2"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -81,7 +81,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""d3fafaf2-8054-402d-bfc0-40e3afef9bd4"",
-                    ""path"": ""<Keyboard>/downArrow"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -92,7 +92,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""e9f2b5fc-cd05-48d6-b060-084b615bfa81"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -103,7 +103,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""32f1c8a3-b202-4629-b5eb-8d6f4e2edab7"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -114,7 +114,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c8b2a841-2f9b-4cca-b163-607e001432cb"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
@@ -125,7 +125,7 @@ public partial class @InputHandler : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4a024d29-931b-4fdf-a0f7-e74a47abd3b2"",
-                    ""path"": ""<Keyboard>/z"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
